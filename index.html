@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+  Flappy Nano - Un mini-jeu HTML5 simple et addictif.
+  Vous pouvez héberger ce fichier et les fichiers associés (style.css, script.js, og_image.png)
+  sur n'importe quel hébergeur statique (par ex. GitHub Pages, Vercel, Cloudflare Pages).
+  Le jeu se joue directement dans le navigateur sans installation.
+-->
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flappy Nano</title>
+    <!-- Open Graph pour un aperçu enrichi sur X/Twitter et autres plateformes -->
+    <meta property="og:title" content="Flappy Nano – mini‑jeu instantané" />
+    <meta
+      property="og:description"
+      content="Passez les tuyaux et partagez votre score. Aucun téléchargement requis."
+    />
+    <!-- Use external image for preview to avoid upload requirement -->
+    <meta property="og:image" content="https://dummyimage.com/1200x630/70c5ce/ffffff.png&text=Flappy+Nano" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="game-container">
+      <canvas id="gameCanvas" width="400" height="600"></canvas>
+      <!-- Écran de démarrage -->
+      <div id="start-screen" class="overlay">
+        <h1>Flappy Nano</h1>
+        <p>Cliquez ou appuyez sur espace pour démarrer</p>
+      </div>
+      <!-- Écran de fin de partie -->
+      <div id="game-over-screen" class="overlay" style="display: none">
+        <h1>Game Over</h1>
+        <p id="final-score">Score : 0</p>
+        <button id="retry-button">Rejouer</button>
+        <button id="share-button">Partager mon score</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
